@@ -7,6 +7,7 @@ window.onload = function() {
     const body = document.body;    
     const requestAnimationFrame = window.requestAnimationFrame;
     
+    const demon = document.querySelector('.demon');
     let fireballPosition = 0;
     const fireballs = ['left', 'top', 'bottom', 'right'];
     const fireballLeft = document.querySelector('.fireballLeft');
@@ -14,6 +15,7 @@ window.onload = function() {
     const fireballBottom = document.querySelector('.fireballBottom');
     const fireballRight = document.querySelector('.fireballRight');
     let button = document.querySelector('button');
+    
     function renderFrame() {
         
         for(i = 0; i < fireballs.length; i++) {
@@ -34,6 +36,50 @@ window.onload = function() {
         requestAnimationFrame(renderFrame);
     });
     
+    
+    document.body.addEventListener('keydown', function() {
+        // spacebar=32
+        if (evt.keyCode === 37) {
+            buildBorderLeft();
+        } else if (evt.keyCode === 38) {
+            buildBorderTop();
+        } else if (evt.keyCode === 39) {
+            buildBorderRight();
+        } else if (evt.keyCode === 40) {
+            buildBorderBottom();
+        }
+    });
+    
+    function blockFireball() {
+        
+    }
+    
+    function buildBorderLeft() {
+        setInterval(function() {
+            demon.style.borderLeft = '5px solid black';
+        }, 500);
+    }
+    
+    function buildBorderTop() {
+        setInterval(function() {
+            demon.style.borderTop = '5px solid black';
+        }, 500);
+    }
+
+    function buildBorderRight() {
+        setInterval(function() {
+            demon.style.borderRight = '5px solid black';
+        }, 500);
+    }
+    
+
+    function buildBorderBottom() {
+        setInterval(function() {
+            demon.style.borderBottom = '5px solid black';
+        }, 500);
+    }
+    
+
 }
 
 
