@@ -9,10 +9,10 @@ window.onload = function() {
     const cancelAnimationFrame = window.cancelAnimationFrame;
     
     const demon = document.querySelector('.demon');
-    let fireballPositionLeft = 0;
-    let fireballPositionTop = 0;
-    let fireballPositionBottom = 0;
-    let fireballPositionRight = 0;
+    let fireballPositionLeft = -150;
+    let fireballPositionTop = -200;
+    let fireballPositionBottom = -230;
+    let fireballPositionRight = -270;
     const fireballs = ['left', 'top', 'bottom', 'right'];
     const fireballLeft = document.querySelector('.fireballLeft');
     const fireballTop = document.querySelector('.fireballTop');
@@ -24,65 +24,12 @@ window.onload = function() {
     // let max = 0;
 
     
-    // function renderFrame() {
-    //     fireballPosition += 2;
-    //     fireballLeft.style.left = fireballPosition + 'px';
-    //     fireballTop.style.top = fireballPosition + 'px';
-    //     fireballBottom.style.bottom = fireballPosition + 'px';
-    //     fireballRight.style.right = fireballPosition + 'px';
+    window.addEventListener('load', function() {
 
-    //     requestAnimationFrame(renderFrame);
-    // };
-    
-    function shootLeftFireball() {
-        fireballPositionLeft += 1;
-        fireballLeft.style.left = fireballPositionLeft + 'px';
-        requestAnimationFrame(shootLeftFireball);
-        if(fireballPositionLeft === 700) {
-            fireballPositionLeft = 0;
-        }
-    }
-    
-    function shootTopFireball() {
-        fireballPositionTop += 1;
-        fireballTop.style.top = fireballPositionTop + 'px';
-        requestAnimationFrame(shootTopFireball);
-        if(fireballPositionTop === 700) {
-            fireballPositionTop = 0;
-        }
-    }
-    
-    function shootBottomFireball() {
-        fireballPositionBottom += 1;
-        fireballBottom.style.bottom = fireballPositionBottom + 'px';
-        requestAnimationFrame(shootBottomFireball);
-        if(fireballPositionBottom === 700) {
-            fireballPositionBottom = 0;
-        }
-    }
-    
-    function shootRightFireball() {
-        fireballPositionRight += 1;
-        fireballRight.style.right = fireballPositionRight + 'px';
-        requestAnimationFrame(shootRightFireball);
-        if(fireballPositionRight === 700) {
-            fireballPositionRight = 0;
-        }
-    }
-    
-    const shootFireballs = [
-        shootLeftFireball,
-        shootTopFireball,
-        shootBottomFireball,
-        shootRightFireball
-    ];
-    
-    button.addEventListener('click', function() {
-
-       setTimeout(shootFireballs[0], Math.floor(Math.random() * 7000));
-       setTimeout(shootFireballs[1], Math.floor(Math.random() * 7000));
-       setTimeout(shootFireballs[2], Math.floor(Math.random() * 7000));
-       setTimeout(shootFireballs[3], Math.floor(Math.random() * 7000));
+       setTimeout(renderFrame, Math.floor(Math.random() * 7000));
+       setTimeout(renderFrame, Math.floor(Math.random() * 7000));
+       setTimeout(renderFrame, Math.floor(Math.random() * 7000));
+       setTimeout(renderFrame, Math.floor(Math.random() * 7000));
        
        
         // for(i = 0; i < shootFireballs.length; i++) {
@@ -90,6 +37,78 @@ window.onload = function() {
         //     shootFireballs[i]();
         // }
     });
+    
+    
+    function renderFrame() {
+        fireballPositionLeft += 2;
+        fireballPositionTop += 2;
+        fireballPositionBottom += 2;
+        fireballPositionRight += 2;
+
+        fireballLeft.style.left = fireballPositionLeft + 'px';
+        fireballTop.style.top = fireballPositionTop + 'px';
+        fireballBottom.style.bottom = fireballPositionBottom + 'px';
+        fireballRight.style.right = fireballPositionRight + 'px';
+        if(fireballPositionLeft === 700) {
+            fireballPositionLeft = -200;
+        } 
+        if(fireballPositionTop === 700) {
+            fireballPositionTop = -200;
+        } 
+        if(fireballPositionBottom === 700) {
+            fireballPositionBottom = -200;
+        } 
+        if(fireballPositionRight === 700) {
+            fireballPositionRight = -200;
+        }
+
+        requestAnimationFrame(renderFrame);
+    };
+    requestAnimationFrame(renderFrame);
+    // function shootLeftFireball() {
+    //     fireballPositionLeft += 1;
+    //     fireballLeft.style.left = fireballPositionLeft + 'px';
+    //     requestAnimationFrame(shootLeftFireball);
+    //     if(fireballPositionLeft === 700) {
+    //         fireballPositionLeft = 0;
+    // }
+    
+    // function shootTopFireball() {
+    //     fireballPositionTop += 1;
+    //     fireballTop.style.top = fireballPositionTop + 'px';
+    //     requestAnimationFrame(shootTopFireball);
+    //     if(fireballPositionTop === 700) {
+    //         fireballPositionTop = 0;
+    //     } if(fireballPositionRight === 700) {
+    //         fireballPositionRight = 0;
+    //     }
+    // }
+    
+    // function shootBottomFireball() {
+    //     fireballPositionBottom += 1;
+    //     fireballBottom.style.bottom = fireballPositionBottom + 'px';
+    //     requestAnimationFrame(shootBottomFireball);
+    //     if(fireballPositionBottom === 700) {
+    //         fireballPositionBottom = 0;
+    //     }
+    // }
+    
+    // function shootRightFireball() {
+    //     fireballPositionRight += 1;
+    //     fireballRight.style.right = fireballPositionRight + 'px';
+    //     requestAnimationFrame(shootRightFireball);
+    //     if(fireballPositionRight === 700) {
+    //         fireballPositionRight = 0;
+    //     }
+    // }
+    
+    // const shootFireballs = [
+    //     shootLeftFireball,
+    //     shootTopFireball,
+    //     shootBottomFireball,
+    //     shootRightFireball
+    // ];
+    
     
     // function continuousFireballs() {
     //     setTimeout(function() {
