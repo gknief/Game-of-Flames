@@ -68,68 +68,29 @@ window.onload = function() {
 
         if(fireballPositionLeft === 110) {
             if(hasBorderLeft === false) {
-            alert('Game over, you\'ve been hit.');
+            // alert('Game over, you\'ve been hit.');
+            }
+            if(hasBorderLeft === true) {
+                demon.style.borderLeft = 'none'
+                fireballPositionLeft = -150;
+            }
+        }
+
+        if(fireballPositionLeft === 112) {
+            if(hasBorderLeft === false) {
+            // alert('Game over, you\'ve been hit.');
+            }
+            if(hasBorderLeft === true) {
+                demon.style.borderLeft = 'none'
+                fireballPositionLeft = -150;
             }
         }
 
         requestAnimationFrame(renderFrame);
     };
-    requestAnimationFrame(renderFrame);
 
+    // requestAnimationFrame(renderFrame);
 
-
-
-
-    // function shootLeftFireball() {
-    //     fireballPositionLeft += 1;
-    //     fireballLeft.style.left = fireballPositionLeft + 'px';
-    //     requestAnimationFrame(shootLeftFireball);
-    //     if(fireballPositionLeft === 700) {
-    //         fireballPositionLeft = 0;
-    // }
-    
-    // function shootTopFireball() {
-    //     fireballPositionTop += 1;
-    //     fireballTop.style.top = fireballPositionTop + 'px';
-    //     requestAnimationFrame(shootTopFireball);
-    //     if(fireballPositionTop === 700) {
-    //         fireballPositionTop = 0;
-    //     } if(fireballPositionRight === 700) {
-    //         fireballPositionRight = 0;
-    //     }
-    // }
-    
-    // function shootBottomFireball() {
-    //     fireballPositionBottom += 1;
-    //     fireballBottom.style.bottom = fireballPositionBottom + 'px';
-    //     requestAnimationFrame(shootBottomFireball);
-    //     if(fireballPositionBottom === 700) {
-    //         fireballPositionBottom = 0;
-    //     }
-    // }
-    
-    // function shootRightFireball() {
-    //     fireballPositionRight += 1;
-    //     fireballRight.style.right = fireballPositionRight + 'px';
-    //     requestAnimationFrame(shootRightFireball);
-    //     if(fireballPositionRight === 700) {
-    //         fireballPositionRight = 0;
-    //     }
-    // }
-    
-    // const shootFireballs = [
-    //     shootLeftFireball,
-    //     shootTopFireball,
-    //     shootBottomFireball,
-    //     shootRightFireball
-    // ];
-    
-    
-    // function continuousFireballs() {
-    //     setTimeout(function() {
-    //         requestAnimationFrame(renderFrame);
-    //     }, 1000);
-    // }
     
     document.body.addEventListener('keydown', function(event) {
         if (event.keyCode === 37) {
@@ -155,27 +116,6 @@ window.onload = function() {
         }
     });
     
-    function blockFireball() {
-        let fireballEdge = {
-            x: 5, 
-            y: 5, 
-            width: 50, 
-            height: 50,
-        }
-        let borderEdge = {
-            x: 20, 
-            y: 10, 
-            width: 10, 
-            height: 10,
-        }
-    
-if (fireballEdge.x < borderEdge.x + borderEdge.width &&
-   rect1.x + rect1.width > rect2.x &&
-   rect1.y < rect2.y + rect2.height &&
-   rect1.y + rect1.height > rect2.y) {
-    // collision detected!
-    }
-}
     
     function buildBorderLeft() {
         // setTimeout(function() {
@@ -205,11 +145,3 @@ if (fireballEdge.x < borderEdge.x + borderEdge.width &&
     
 
 }
-
-
-
-
-// https://itnext.io/javascript-raf-requestanimationframe-456f8a0d04b0
-// 60 FPS
-// (1000 ms /60 frames) = 16.7 ms. Let’s move our DOM element 1px in callback execution while 
-// callback needs to be called at every 16.7ms.
