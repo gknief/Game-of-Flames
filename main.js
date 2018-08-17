@@ -20,6 +20,9 @@ window.onload = function() {
     const fireballRight = document.querySelector('.fireballRight');
     let button = document.querySelector('button');
 
+    let hasBorderLeft = false;
+
+
     // let min = 0;
     // let max = 0;
 
@@ -62,9 +65,21 @@ window.onload = function() {
             fireballPositionRight = -200;
         }
 
+
+        if(fireballPositionLeft === 110) {
+            if(hasBorderLeft === false) {
+            alert('Game over, you\'ve been hit.');
+            }
+        }
+
         requestAnimationFrame(renderFrame);
     };
     requestAnimationFrame(renderFrame);
+
+
+
+
+
     // function shootLeftFireball() {
     //     fireballPositionLeft += 1;
     //     fireballLeft.style.left = fireballPositionLeft + 'px';
@@ -165,6 +180,7 @@ if (fireballEdge.x < borderEdge.x + borderEdge.width &&
     function buildBorderLeft() {
         // setTimeout(function() {
             demon.style.borderLeft = '5px solid black';
+            hasBorderLeft = true;
         // }, 500);
     }
     
