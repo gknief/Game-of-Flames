@@ -17,7 +17,6 @@
 .grid {
     width: 600px;
     height: 600px;
-    background-color: linen;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -33,6 +32,8 @@
     background-repeat: no-repeat;
     top: 265px;
     left: 260px;
+    border: 5px solid transparent;
+    box-sizing: border-box;
 }
 
 .demonEvolve {
@@ -66,7 +67,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     transform: rotate(270deg);
-    top: -150px;
+    top: -200px;
     left: 260px;
   }
 
@@ -78,7 +79,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     transform: rotate(90deg);
-    bottom: -150px;
+    bottom: -240px;
     left: 190px;
   }
 
@@ -90,7 +91,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     top: 270px;
-    right: -150px;
+    right: -270px;
   }
   
  
@@ -99,3 +100,8 @@ button {
     top: 20px;
     left: 20px;
 }
+
+.youWin {
+    opacity: 1;
+    pointer-events: all;
+  }
