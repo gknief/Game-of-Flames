@@ -117,7 +117,7 @@ window.onload = function() {
         requestAnimationFrame(renderFrame);
     };
 
-    requestAnimationFrame(renderFrame);
+    // requestAnimationFrame(renderFrame);
 
     
     document.body.addEventListener('keydown', function(event) {
@@ -127,9 +127,9 @@ window.onload = function() {
             // hasBorderTop = false;
             // hasBorderBottom = false;
             // hasBorderRight = false;
-            setTimeout(function() {
-            demon.classList.toggle = ('demon-evolve');
-            }, 500);    
+            // setTimeout(function() {
+            document.body.demon.classList.toggle = ('.demon-evolve');
+            // }, 500);    
         } 
         if (event.keyCode === 38) {
             buildBorderTop();
