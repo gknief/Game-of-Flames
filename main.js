@@ -46,38 +46,28 @@ window.onload = function() {
     
     
      function renderFrame() {
-         fireballPositionLeft += 2;
-         fireballPositionTop += 2;
-         fireballPositionBottom += 2;
-         fireballPositionRight += 2;
+        fireballPositionLeft += 2;
+        fireballPositionTop += 2;
+        fireballPositionBottom += 2;
+        fireballPositionRight += 2;
          
-         fireballLeft.style.left = fireballPositionLeft + 'px';
-         fireballTop.style.top = fireballPositionTop + 'px';
-         fireballBottom.style.bottom = fireballPositionBottom + 'px';
-         fireballRight.style.right = fireballPositionRight + 'px';
-         const scoreboard = document.querySelector('.scoreboard');
-         const blockCounter = scoreboard.innerHTML = score;
-         if (blockCounter === 0) {
-             const wonGame = document.querySelector('body').classList.add('you-win');
+        fireballLeft.style.left = fireballPositionLeft + 'px';
+        fireballTop.style.top = fireballPositionTop + 'px';
+        fireballBottom.style.bottom = fireballPositionBottom + 'px';
+        fireballRight.style.right = fireballPositionRight + 'px';
+        const scoreboard = document.querySelector('.scoreboard');
+        const blockCounter = scoreboard.innerHTML = score;
+        let wonGame;
+        let lostGame;
+
+        if (blockCounter === 0) {
+            wonGame = document.querySelector('.body').classList.add('you-win');
          }
          
-         // if(fireballPositionLeft === 700) {
-             //     fireballPositionLeft = -200;
-        // } 
-        // if(fireballPositionTop === 700) {
-        //     fireballPositionTop = -200;
-        // } 
-        // if(fireballPositionBottom === 700) {
-        //     fireballPositionBottom = -200;
-        // } 
-        // if(fireballPositionRight === 700) {
-        //     fireballPositionRight = -200;
-        // }
-
 
         if(fireballPositionLeft >= 110) {
             if(hasBorderLeft === false) {
-            // alert('Game over, you\'ve been hit.');
+            lostGame = document.querySelector('.body').classList.add('you-lose');
             }
             if(hasBorderLeft === true) {
                 score -= 1;
@@ -89,7 +79,7 @@ window.onload = function() {
 
         if(fireballPositionTop >= 116) {
             if(hasBorderTop === false) {
-            // alert('Game over, you\'ve been hit.');
+            lostGame = document.querySelector('.body').classList.add('you-lose');
             }
             if(hasBorderTop === true) {
                 score -= 1;
@@ -134,24 +124,39 @@ window.onload = function() {
         if (event.keyCode === 37) {
             buildBorderLeft();
             hasBorderLeft = true;
+            // hasBorderTop = false;
+            // hasBorderBottom = false;
+            // hasBorderRight = false;
             setTimeout(function() {
             demon.classList.toggle = ('demon-evolve');
             }, 500);    
         } 
         if (event.keyCode === 38) {
             buildBorderTop();
+            // hasBorderLeft = false;
+            hasBorderTop = true;
+            // hasBorderBottom = false;
+            // hasBorderRight = false;
             setTimeout(function() {
             demon.classList.toggle = ('demon-evolve');
             }, 500);    
         } 
         if (event.keyCode === 39) {
             buildBorderRight();
+            // hasBorderLeft = false;
+            // hasBorderTop = false;
+            // hasBorderBottom = false;
+            hasBorderRight = true;
             setTimeout(function() {
             demon.classList.toggle = ('demon-evolve');
             }, 500);    
         } 
         if (event.keyCode === 40) {
             buildBorderBottom();
+            // hasBorderLeft = false;
+            // hasBorderTop = false;
+            hasBorderBottom = true;
+            // hasBorderRight = false;
             setTimeout(function() {
             demon.classList.toggle = ('demon-evolve');
             }, 500);    
@@ -160,32 +165,40 @@ window.onload = function() {
     
     
     function buildBorderLeft() {
-        // setTimeout(function() {
-            demon.style.borderLeft = '5px solid black';
-            hasBorderLeft = true;
-        // }, 500);
+        demon.style.borderLeft = '5px solid black';
+        hasBorderLeft = true;
+        setTimeout(function() {
+        demon.style.borderLeft = 'none';
+        hasBorderLeft = false;
+        }, 500);
     }
     
     function buildBorderTop() {
-        // setInterval(function() {
-            demon.style.borderTop = '5px solid black';
-            hasBorderTop = true;
-        // }, 500);
+        demon.style.borderTop = '5px solid black';
+        hasBorderTop = true;
+        setTimeout(function() {
+        demon.style.borderTop = 'none';
+        hasBorderTop = false;
+        }, 500);
     }
 
     function buildBorderRight() {
-        // setInterval(function() {
-            demon.style.borderRight = '5px solid black';
-            hasBorderBottom = true;
-        // }, 500);
+        demon.style.borderRight = '5px solid black';
+        hasBorderBottom = true;
+        setTimeout(function() {
+        demon.style.borderRight = 'none';
+        hasBorderRight = false;
+        }, 500);
     }
     
 
     function buildBorderBottom() {
-        // setInterval(function() {
-            demon.style.borderBottom = '5px solid black';
-            hasBorderRight = true;
-        // }, 500);
+        demon.style.borderBottom = '5px solid black';
+        hasBorderRight = true;
+        setTimeout(function() {
+        demon.style.borderBottom = 'none';
+        hasBorderBottom = false;
+        }, 500);
     }
     
 
