@@ -13,10 +13,10 @@ window.onload = function() {
     let fireballPositionTop = -200;
     let fireballPositionBottom = -240;
     let fireballPositionRight = -270;
-    const fireballLeft = document.querySelector('.fireballLeft');
-    const fireballTop = document.querySelector('.fireballTop');
-    const fireballBottom = document.querySelector('.fireballBottom');
-    const fireballRight = document.querySelector('.fireballRight');
+    const fireballLeft = document.querySelector('.fireball-left');
+    const fireballTop = document.querySelector('.fireball-top');
+    const fireballBottom = document.querySelector('.fireball-bottom');
+    const fireballRight = document.querySelector('.fireball-right');
     let button = document.querySelector('button');
 
     let hasBorderLeft = false;
@@ -57,8 +57,8 @@ window.onload = function() {
          fireballRight.style.right = fireballPositionRight + 'px';
          const scoreboard = document.querySelector('.scoreboard');
          const blockCounter = scoreboard.innerHTML = score;
-         if (blockCounter === 25) {
-             const wonGame = document.querySelector('.grid').classList.add('youWin');
+         if (blockCounter === 0) {
+             const wonGame = document.querySelector('body').classList.add('you-win');
          }
          
          // if(fireballPositionLeft === 700) {
@@ -135,25 +135,25 @@ window.onload = function() {
             buildBorderLeft();
             hasBorderLeft = true;
             setTimeout(function() {
-            demon.classList.toggle = ('.demonEvolve');
+            demon.classList.toggle = ('demon-evolve');
             }, 500);    
         } 
         if (event.keyCode === 38) {
             buildBorderTop();
             setTimeout(function() {
-            demon.classList.toggle = ('.demonEvolve');
+            demon.classList.toggle = ('demon-evolve');
             }, 500);    
         } 
         if (event.keyCode === 39) {
             buildBorderRight();
             setTimeout(function() {
-            demon.classList.toggle = ('.demonEvolve');
+            demon.classList.toggle = ('demon-evolve');
             }, 500);    
         } 
         if (event.keyCode === 40) {
             buildBorderBottom();
             setTimeout(function() {
-            demon.classList.toggle = ('demonEvolve');
+            demon.classList.toggle = ('demon-evolve');
             }, 500);    
         }
     });
