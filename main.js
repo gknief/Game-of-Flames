@@ -47,8 +47,9 @@ window.onload = function() {
         const blockCounter = scoreboard.innerHTML = score;
   
         if (blockCounter === 0) {
-            alert("You Win!");
-            document.location.reload();
+            alert("Advance to level two.");
+            window.location.href = "level-two.html";
+            // https://stackoverflow.com/questions/16016095/document-location-href-for-relative-path
         }
 
     

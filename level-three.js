@@ -5,10 +5,10 @@ window.onload = function() {
     const cancelAnimationFrame = window.cancelAnimationFrame;
     
     const demon = document.querySelector('.demon');
-    let fireballPositionLeft = Math.floor(Math.random() * -2000) -500;
-    let fireballPositionTop = Math.floor(Math.random() * -2000) -500;
-    let fireballPositionBottom = Math.floor(Math.random() * -2000) -500;
-    let fireballPositionRight = Math.floor(Math.random() * -2000) -500;
+    let fireballPositionLeft = Math.floor(Math.random() * -3000) -500;
+    let fireballPositionTop = Math.floor(Math.random() * -3000) -500;
+    let fireballPositionBottom = Math.floor(Math.random() * -3000) -500;
+    let fireballPositionRight = Math.floor(Math.random() * -3000) -500;
     const fireballLeft = document.querySelector('.fireball-left');
     const fireballTop = document.querySelector('.fireball-top');
     const fireballBottom = document.querySelector('.fireball-bottom');
@@ -21,7 +21,7 @@ window.onload = function() {
     let hasBorderRight = false;
 
 
-    let score = 40;
+    let score = 50;
 
 
     
@@ -34,10 +34,10 @@ window.onload = function() {
     
     
      function renderFrame() {
-        fireballPositionLeft += 3;
-        fireballPositionTop += 3;
-        fireballPositionBottom += 3;
-        fireballPositionRight += 3;
+        fireballPositionLeft += 4;
+        fireballPositionTop += 4;
+        fireballPositionBottom += 4;
+        fireballPositionRight += 4;
          
         fireballLeft.style.left = fireballPositionLeft + 'px';
         fireballTop.style.top = fireballPositionTop + 'px';
@@ -47,8 +47,8 @@ window.onload = function() {
         const blockCounter = scoreboard.innerHTML = score;
   
         if (blockCounter === 0) {
-            alert("Advance to the final level.");
-            window.location.href = "level-three.html";
+            alert("YOU WIN!! Click OK to start over.");
+            window.location.href = "index.html";
         }
 
     
@@ -60,7 +60,7 @@ window.onload = function() {
             if(hasBorderLeft === true) {
                 score -= 1;
                 demon.style.borderLeft = 'none';
-                fireballPositionLeft = Math.floor(Math.random() * -800) -100;
+                fireballPositionLeft = Math.floor(Math.random() * -900) -150;
                 hasBorderLeft = false;
             }
         }
@@ -73,7 +73,7 @@ window.onload = function() {
             if(hasBorderTop === true) {
                 score -= 1;
                 demon.style.borderTop = 'none';
-                fireballPositionTop = Math.floor(Math.random() * -800) - 100;
+                fireballPositionTop = Math.floor(Math.random() * -900) - 150;
                 hasBorderTop = false;
             }
         }
@@ -86,7 +86,7 @@ window.onload = function() {
             if(hasBorderBottom === true) {
                 score -= 1;
                 demon.style.borderBottom = 'none';
-                fireballPositionBottom = Math.floor(Math.random() * -800) - 100;
+                fireballPositionBottom = Math.floor(Math.random() * -900) - 150;
                 hasBorderBottom = false;
             }
         }
@@ -99,7 +99,7 @@ window.onload = function() {
             if(hasBorderRight === true) {
                 score -= 1;
                 demon.style.borderRight = 'none';
-                fireballPositionRight = Math.floor(Math.random() * -800) - 100;
+                fireballPositionRight = Math.floor(Math.random() * -900) - 150;
                 hasBorderRight = false;
             }
         }

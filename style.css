@@ -29,6 +29,7 @@
 
 body {
     margin: 0 auto;
+    font-family: 'Metamorphous', cursive;
     background-color: black;
     animation: fade-screen-in 2s ease-in;
 }
@@ -45,12 +46,19 @@ h1 {
 h2 {
     margin-top: 5px;
     font-size: 15px;
+    font-family: 'Metamorphous', cursive;
+}
+
+.level {
+    font-family: 'Metamorphous', cursive;
+    font-size: 20px;
+    text-align: center;
 }
 
 .grid {
     width: 600px;
     height: 600px;
-    margin: 0 auto;
+    left: 100px;
     position: relative;
     overflow: hidden;
     animation: color-change 5s infinite alternate;
@@ -61,7 +69,7 @@ h2 {
     position: relative;
     width: 150px;
     height: 100px;
-    border: 2px solid orangered;
+    border: 2px groove orangered;
     font-family: 'Metamorphous', cursive;
     color: #FF9505;
     box-sizing: border-box;
@@ -72,25 +80,33 @@ h2 {
     color: white;
     font-family: 'Metamorphous', cursive;
     font-size: 50px;
-    margin-top: -11px;
+    margin-top: -20px;
 }
 
 .instructions {
-    color: white;
     float: left;
-    height: 400px;
-    width: 200px;
-    border: 5px solid #FF9505;
+    color: #FF9505;
+    height: 320px;
+    width: 170px;
+    border: 5px groove #FF9505;
     text-align: center;
+    padding: 5px;
 }
 
 ul {
     margin-left: -10px;
     text-align: left;
+    color: white;
+}
+
+li {
+    padding: 2px;
+    line-height: 1.2;
 }
 
 #game-instructions {
     font-family: 'Metamorphous', cursive;
+    font-size: 23px;
 }
 
 .demon {
