@@ -39,7 +39,7 @@ h1 {
     color: orangered;
     font-family: 'Metamorphous', cursive;
     text-align: center;
-    font-size: 50px;
+    font-size: 42px;
     margin-top: 0;
     font-weight: 600;
 }
@@ -60,11 +60,11 @@ h2 {
 .grid {
     width: 600px;
     height: 600px;
-    left: 100px;
     position: relative;
     overflow: hidden;
     animation: color-change 5s infinite alternate;
-    margin-top: -30px;
+    margin: 0 auto;
+    top: -30px;
 }
 
 .scoreboard-container {
@@ -86,30 +86,72 @@ h2 {
 }
 
 .instructions {
-    margin-top: 90px;
-    float: left;
+    margin: 0 auto;
     color: #FF9505;
-    height: 320px;
-    width: 170px;
+    height: 500px;
+    width: 600px;
     border: 5px groove #FF9505;
     text-align: center;
     padding: 5px;
+    margin-top: -50px;
 }
+
+#first-page {
+    color: orangered;
+    font-family: 'Metamorphous', cursive;
+    text-align: center;
+    font-size: 100px;
+    margin-top: 30;
+    font-weight: 600;
+}
+
+.instructions:hover {
+    margin: 0 auto;
+    color: #FF9505;
+    height: 500px;
+    width: 600px;
+    border: 5px groove #FF9505;
+    text-align: center;
+    padding: 5px;
+    animation: color-change 5s infinite alternate;
+    margin-top: -50px;
+}
+
 
 ul {
     margin-left: -10px;
     text-align: left;
     color: white;
+    font-size: 20px
 }
 
 li {
     padding: 2px;
-    line-height: 1.2;
+    line-height: 2;
+    font-size: 20px;
 }
 
 #game-instructions {
     font-family: 'Metamorphous', cursive;
-    font-size: 23px;
+    font-size: 40px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    border: 2px groove orangered;
+    top: 105px;
+    font-family: 'Metamorphous', cursive;
+}
+button:hover {
+    width: 100px;
+    height: 50px;
+    background-color: #FF9505;
+    border: 2px groove orangered;
+    top: 105px;
+    font-family: 'Metamorphous', cursive;
+    font-size: 14px;
 }
 
 .demon {
