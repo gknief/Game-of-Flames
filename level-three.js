@@ -48,6 +48,7 @@ window.onload = function () {
         if (blockCounter === 0) {
             alert("YOU WIN!! Click OK to start over.");
             window.location.href = "index.html";
+            return;
         }
 
 

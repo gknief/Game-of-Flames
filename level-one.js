@@ -48,6 +48,7 @@ window.onload = function () {
         if (blockCounter === 0) {
             alert("Advance to level two.");
             window.location.href = "level-two.html";
+            return;
         }
 
 

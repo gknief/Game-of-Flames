@@ -47,6 +47,7 @@ window.onload = function () {
         if (blockCounter === 0) {
             alert("Advance to the final level.");
             window.location.href = "level-three.html";
+            return;
         }
 
 
