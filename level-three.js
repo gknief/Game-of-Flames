@@ -4,10 +4,10 @@ window.onload = function () {
     const cancelAnimationFrame = window.cancelAnimationFrame;
 
     const demon = document.querySelector('.demon');
-    let fireballPositionLeft = Math.floor(Math.random() * -2200) - 500;
-    let fireballPositionTop = Math.floor(Math.random() * -2200) - 500;
-    let fireballPositionBottom = Math.floor(Math.random() * -2200) - 500;
-    let fireballPositionRight = Math.floor(Math.random() * -2200) - 500;
+    let fireballPositionLeft = Math.floor(Math.random() * -2000) - 500;
+    let fireballPositionTop = Math.floor(Math.random() * -2000) - 500;
+    let fireballPositionBottom = Math.floor(Math.random() * -2000) - 500;
+    let fireballPositionRight = Math.floor(Math.random() * -2000) - 500;
     const fireballLeft = document.querySelector('.fireball-left');
     const fireballTop = document.querySelector('.fireball-top');
     const fireballBottom = document.querySelector('.fireball-bottom');
@@ -33,10 +33,10 @@ window.onload = function () {
 
     function renderFrame() {
         dungeon.play();
-        fireballPositionLeft += 4;
-        fireballPositionTop += 4;
-        fireballPositionBottom += 4;
-        fireballPositionRight += 4;
+        fireballPositionLeft += 6;
+        fireballPositionTop += 6;
+        fireballPositionBottom += 6;
+        fireballPositionRight += 6;
 
         fireballLeft.style.left = fireballPositionLeft + 'px';
         fireballTop.style.top = fireballPositionTop + 'px';
@@ -59,7 +59,7 @@ window.onload = function () {
             if (hasBorderLeft === true) {
                 score -= 1;
                 demon.style.borderLeftColor = 'transparent';
-                fireballPositionLeft = Math.floor(Math.random() * -900) - 150;
+                fireballPositionLeft = Math.floor(Math.random() * -700) - 150;
                 hasBorderLeft = false;
                 flame.play();
             }
@@ -73,7 +73,7 @@ window.onload = function () {
             if (hasBorderTop === true) {
                 score -= 1;
                 demon.style.borderTopColor = 'transparent';
-                fireballPositionTop = Math.floor(Math.random() * -900) - 150;
+                fireballPositionTop = Math.floor(Math.random() * -700) - 150;
                 hasBorderTop = false;
                 flame.play();
             }
@@ -87,7 +87,7 @@ window.onload = function () {
             if (hasBorderBottom === true) {
                 score -= 1;
                 demon.style.borderBottomColor = 'transparent';
-                fireballPositionBottom = Math.floor(Math.random() * -900) - 150;
+                fireballPositionBottom = Math.floor(Math.random() * -700) - 150;
                 hasBorderBottom = false;
                 flame.play();
             }
@@ -101,7 +101,7 @@ window.onload = function () {
             if (hasBorderRight === true) {
                 score -= 1;
                 demon.style.borderRightColor = 'transparent';
-                fireballPositionRight = Math.floor(Math.random() * -900) - 150;
+                fireballPositionRight = Math.floor(Math.random() * -700) - 150;
                 hasBorderRight = false;
                 flame.play();
             }
