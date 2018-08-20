@@ -120,7 +120,7 @@ window.onload = function () {
             hasBorderLeft = true;
             wall.play();
             demon.classList.toggle('demon-evolve');
-            setTimeout(function() {
+            setTimeout(function () {
                 demon.classList.toggle('demon-evolve');
             }, 300);
         }
@@ -129,7 +129,7 @@ window.onload = function () {
             hasBorderTop = true;
             wall.play();
             demon.classList.toggle('demon-evolve');
-            setTimeout(function() {
+            setTimeout(function () {
                 demon.classList.toggle('demon-evolve');
             }, 300);
         }
@@ -138,7 +138,7 @@ window.onload = function () {
             hasBorderRight = true;
             wall.play();
             demon.classList.toggle('demon-evolve');
-            setTimeout(function() {
+            setTimeout(function () {
                 demon.classList.toggle('demon-evolve');
             }, 300);
         }
@@ -147,7 +147,7 @@ window.onload = function () {
             hasBorderBottom = true;
             wall.play();
             demon.classList.toggle('demon-evolve');
-            setTimeout(function() {
+            setTimeout(function () {
                 demon.classList.toggle('demon-evolve');
             }, 300);
         }
