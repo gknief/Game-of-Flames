@@ -1,16 +1,16 @@
 @keyframes color-change {
     0% {
-      background-color: #EC4E20;
+        background-color: #EC4E20;
     }
     50% {
-      background-color: #7A30CF;
+        background-color: #7A30CF;
     }
     100% {
       background-color: #FF0000;
     }
   }
-
-@keyframes fade-screen-in {
+  
+  @keyframes fade-screen-in {
     0% {
         opacity: 0;
         background-color: #EC4E20;
@@ -27,11 +27,12 @@
     }
 }
 
+
 body {
     margin: 0 auto;
     font-family: 'Metamorphous', cursive;
     background-color: black;
-    animation: fade-screen-in 2s ease-in;
+    animation: fade-screen-in 3s ease-in;
 }
 
 h1 {
@@ -42,6 +43,7 @@ h1 {
     margin-top: 0;
     font-weight: 600;
 }
+
 
 h2 {
     margin-top: 5px;

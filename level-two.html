@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,50 +8,55 @@
     <title>Project 1: Game of Flames</title>
     <link href="https://fonts.googleapis.com/css?family=Metamorphous" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="level-two.js"></script>   
+    <script src="level-two.js"></script>
 </head>
+
 <body>
 
 
-<h1>Game of Flames</h1>
+    <h1>Game of Flames</h1>
 
 
-<div class = "instructions">
-    <h2 id="game-instructions">Instructions:</h2>
-    <ul>
-        <li>Use up, down, left and right arrow keys to block</li>
-        <li>Each wall you build will disappear after 0.5s</li>
-        <li>If you get hit, you lose</li>
-        <li>Block 40 fireballs to advance</li>
-    </ul>
-</div>
-
-<div class = "grid">
-    <div class="scoreboard-container">
-        <h2 class = "level">Level Two</h2>
-        <h3 class="scoreboard">40</h3>
+    <div class="instructions">
+        <h2 id="game-instructions">Instructions:</h2>
+        <ul>
+            <li>Use up, down, left and right arrow keys to block</li>
+            <li>Each wall you build will disappear after 0.5s</li>
+            <li>If you get hit, you lose</li>
+            <li>Block 40 fireballs to advance</li>
+        </ul>
     </div>
 
-    <div class = "demon">
+    <div class="grid">
+        <div class="scoreboard-container">
+            <h2 class="level">Level Two</h2>
+            <h3 class="scoreboard">40</h3>
+        </div>
+
+        <div class="demon">
+        </div>
+
+        <div class="fireball-left">
+        </div>
+
+        <div class="fireball-top">
+        </div>
+
+        <div class="fireball-bottom">
+        </div>
+
+        <div class="fireball-right">
+        </div>
+
     </div>
 
-    <div class = "fireball-left">
-    </div>
 
-    <div class = "fireball-top">
-    </div>
-    
-    <div class = "fireball-bottom">
-    </div>
-    
-    <div class = "fireball-right">
-    </div>
-
-</div>
-
-
-<!-- <audio class="flame">
-        <source src="fireball.wav">
-</audio> -->
+    <audio id="music">
+        <source src="creepy-bg.wav">
+    </audio>
+    <audio id="flame">
+        <source src="fireblock.wav">
+    </audio>
 </body>
+
 </html>
