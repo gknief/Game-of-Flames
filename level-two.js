@@ -1,6 +1,5 @@
 window.onload = function () {
 
-    const body = document.body;
     const requestAnimationFrame = window.requestAnimationFrame;
     const cancelAnimationFrame = window.cancelAnimationFrame;
 
@@ -21,7 +20,8 @@ window.onload = function () {
     let hasBorderRight = false;
 
     let flame = document.getElementById('flame');
-    let music = document.getElementById('music');
+    let dungeon = document.getElementById('dungeon');
+    let wall = document.getElementById('wall');
 
     let score = 40;
 
@@ -30,9 +30,8 @@ window.onload = function () {
     });
 
 
-
     function renderFrame() {
-        music.play();
+        dungeon.play();
         fireballPositionLeft += 3;
         fireballPositionTop += 3;
         fireballPositionBottom += 3;
@@ -58,7 +57,7 @@ window.onload = function () {
             }
             if (hasBorderLeft === true) {
                 score -= 1;
-                demon.style.borderLeft = 'none';
+                demon.style.borderLeftColor = 'transparent';
                 fireballPositionLeft = Math.floor(Math.random() * -800) - 100;
                 hasBorderLeft = false;
                 flame.play();
@@ -72,7 +71,7 @@ window.onload = function () {
             }
             if (hasBorderTop === true) {
                 score -= 1;
-                demon.style.borderTop = 'none';
+                demon.style.borderTopColor = 'transparent';
                 fireballPositionTop = Math.floor(Math.random() * -800) - 100;
                 hasBorderTop = false;
                 flame.play();
@@ -86,7 +85,7 @@ window.onload = function () {
             }
             if (hasBorderBottom === true) {
                 score -= 1;
-                demon.style.borderBottom = 'none';
+                demon.style.borderBottomColor = 'transparent';
                 fireballPositionBottom = Math.floor(Math.random() * -800) - 100;
                 hasBorderBottom = false;
                 flame.play();
@@ -100,7 +99,7 @@ window.onload = function () {
             }
             if (hasBorderRight === true) {
                 score -= 1;
-                demon.style.borderRight = 'none';
+                demon.style.borderRightColor = 'transparent';
                 fireballPositionRight = Math.floor(Math.random() * -800) - 100;
                 hasBorderRight = false;
                 flame.play();
@@ -119,57 +118,77 @@ window.onload = function () {
         if (event.keyCode === 37) {
             buildBorderLeft();
             hasBorderLeft = true;
+            wall.play();
+            demon.classList.toggle('demon-evolve');
+            setTimeout(function() {
+                demon.classList.toggle('demon-evolve');
+            }, 300);
         }
         if (event.keyCode === 38) {
             buildBorderTop();
             hasBorderTop = true;
+            wall.play();
+            demon.classList.toggle('demon-evolve');
+            setTimeout(function() {
+                demon.classList.toggle('demon-evolve');
+            }, 300);
         }
         if (event.keyCode === 39) {
             buildBorderRight();
             hasBorderRight = true;
+            wall.play();
+            demon.classList.toggle('demon-evolve');
+            setTimeout(function() {
+                demon.classList.toggle('demon-evolve');
+            }, 300);
         }
         if (event.keyCode === 40) {
             buildBorderBottom();
             hasBorderBottom = true;
+            wall.play();
+            demon.classList.toggle('demon-evolve');
+            setTimeout(function() {
+                demon.classList.toggle('demon-evolve');
+            }, 300);
         }
-        
+
     });
 
 
     function buildBorderLeft() {
-        demon.style.borderLeft = '5px groove black';
+        demon.style.borderLeftColor = 'black';
         hasBorderLeft = true;
         setTimeout(function () {
-            demon.style.borderLeft = 'none';
+            demon.style.borderLeftColor = 'transparent';
             hasBorderLeft = false;
         }, 500);
     }
 
     function buildBorderTop() {
-        demon.style.borderTop = '5px groove black';
+        demon.style.borderTopColor = 'black';
         hasBorderTop = true;
         setTimeout(function () {
-            demon.style.borderTop = 'none';
+            demon.style.borderTopColor = 'transparent';
             hasBorderTop = false;
         }, 500);
     }
 
     function buildBorderRight() {
-        demon.style.borderRight = '5px groove black';
+        demon.style.borderRightColor = 'black';
         demon.classList.toggle('.demon-evolve');
         hasBorderRight = true;
         setTimeout(function () {
-            demon.style.borderRight = 'none';
+            demon.style.borderRightColor = 'transparent';
             hasBorderRight = false;
         }, 500);
     }
 
 
     function buildBorderBottom() {
-        demon.style.borderBottom = '5px groove black';
+        demon.style.borderBottomColor = 'black';
         hasBorderBottom = true;
         setTimeout(function () {
-            demon.style.borderBottom = 'none';
+            demon.style.borderBottomColor = 'transparent';
             hasBorderBottom = false;
         }, 500);
     }
