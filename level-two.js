@@ -21,7 +21,7 @@ window.onload = function() {
     let hasBorderRight = false;
 
 
-    let score = 30;
+    let score = 40;
 
 
     
@@ -34,10 +34,10 @@ window.onload = function() {
     
     
      function renderFrame() {
-        fireballPositionLeft += 2;
-        fireballPositionTop += 2;
-        fireballPositionBottom += 2;
-        fireballPositionRight += 2;
+        fireballPositionLeft += 4;
+        fireballPositionTop += 4;
+        fireballPositionBottom += 4;
+        fireballPositionRight += 4;
          
         fireballLeft.style.left = fireballPositionLeft + 'px';
         fireballTop.style.top = fireballPositionTop + 'px';
@@ -135,9 +135,8 @@ window.onload = function() {
     
 
     function buildBorderLeft() {
-        demon.style.borderLeft = '5px solid black';
+        demon.style.borderLeft = '5px groove black';
         hasBorderLeft = true;
-        toggleCharacter();
         setTimeout(function() {
         demon.style.borderLeft = 'none';
         hasBorderLeft = false;
@@ -145,7 +144,7 @@ window.onload = function() {
     }
     
     function buildBorderTop() {
-        demon.style.borderTop = '5px solid black';
+        demon.style.borderTop = '5px groove black';
         hasBorderTop = true;
         setTimeout(function() {
         demon.style.borderTop = 'none';
@@ -154,7 +153,7 @@ window.onload = function() {
     }
 
     function buildBorderRight() {
-        demon.style.borderRight = '5px solid black';
+        demon.style.borderRight = '5px groove black';
         demon.classList.toggle('.demon-evolve');
         hasBorderRight = true;
         setTimeout(function() {
@@ -165,7 +164,7 @@ window.onload = function() {
     
 
     function buildBorderBottom() {
-        demon.style.borderBottom = '5px solid black';
+        demon.style.borderBottom = '5px groove black';
         hasBorderBottom = true;
         setTimeout(function() {
         demon.style.borderBottom = 'none';

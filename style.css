@@ -15,7 +15,6 @@ body {
     height: 800px; */
     margin: 0 auto;
     background-color: black;
-    animation: color-change 5s infinite-alternate;
 }
 
 h1 {
@@ -48,7 +47,7 @@ h2 {
     height: 100px;
     border: 2px solid orangered;
     font-family: 'Metamorphous', cursive;
-    color: gold;
+    color: #FF9505;
     box-sizing: border-box;
 }
 
@@ -65,7 +64,7 @@ h2 {
     float: left;
     height: 400px;
     width: 200px;
-    border: 5px solid orangered;
+    border: 5px solid #FF9505;
     text-align: center;
 }
 
@@ -100,6 +99,8 @@ ul {
     background-repeat: no-repeat;
     top: 265px;
     left: 260px;
+    border: 5px solid transparent;
+    box-sizing: border-box;
 }
 
 .fireball-left {
@@ -156,7 +157,25 @@ button {
     left: 20px;
 }
 
-.you-win {
+/* .you-win {
+    width: 600px;
+    height: 600px;
+    background-color: black;
     opacity: 1;
     pointer-events: all;
+    color: white;
+  } */
+
+  .you-win {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+    background-color: #111;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 250ms ease;
   }
