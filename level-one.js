@@ -55,6 +55,7 @@ window.onload = function () {
             if (fireballPositionLeft >= 124 && hasBorderLeft === false) {
                 alert("You lose. Try again!");
                 document.location.reload();
+                return;
             }
             if (hasBorderLeft === true) {
                 score -= 1;
@@ -69,6 +70,7 @@ window.onload = function () {
             if (fireballPositionTop >= 134 && hasBorderTop === false) {
                 alert("You lose. Try again!");
                 document.location.reload();
+                return;
             }
             if (hasBorderTop === true) {
                 score -= 1;
@@ -83,6 +85,7 @@ window.onload = function () {
             if (fireballPositionBottom >= 128 && hasBorderBottom === false) {
                 alert("You lose. Try again!");
                 document.location.reload();
+                return;
             }
             if (hasBorderBottom === true) {
                 score -= 1;
@@ -97,6 +100,7 @@ window.onload = function () {
             if (fireballPositionRight >= 131 && hasBorderRight === false) {
                 alert("You lose. Try again!");
                 document.location.reload();
+                return;
             }
             if (hasBorderRight === true) {
                 score -= 1;
