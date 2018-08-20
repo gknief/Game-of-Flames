@@ -10,11 +10,27 @@
     }
   }
 
+@keyframes fade-screen-in {
+    0% {
+        opacity: 0;
+        background-color: #EC4E20;
+    }
+    
+    50% {
+        opacity: 0.5;
+        background-color: #7A30CF;
+    }
+   
+    100% {
+        opacity: 1;
+        background-color: black;
+    }
+}
+
 body {
-    /* width: 800px;
-    height: 800px; */
     margin: 0 auto;
     background-color: black;
+    animation: fade-screen-in 2s ease-in;
 }
 
 h1 {
@@ -151,31 +167,3 @@ ul {
   }
   
  
-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-/* .you-win {
-    width: 600px;
-    height: 600px;
-    background-color: black;
-    opacity: 1;
-    pointer-events: all;
-    color: white;
-  } */
-
-  .you-win {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 4rem;
-    background-color: #111;
-    text-align: center;
-    z-index: 10;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 250ms ease;
-  }
