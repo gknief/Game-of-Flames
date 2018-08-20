@@ -20,20 +20,19 @@ window.onload = function() {
     let hasBorderBottom = false;
     let hasBorderRight = false;
 
+    let flame = document.getElementById('flame');
+    let music = document.getElementById('music');
 
     let score = 30;
-
-
     
     window.addEventListener('load', function() {
-
        setTimeout(renderFrame, Math.floor(Math.random() * 7000));
-       
     });
     
     
     
      function renderFrame() {
+        music.play();
         fireballPositionLeft += 2;
         fireballPositionTop += 2;
         fireballPositionBottom += 2;
@@ -62,8 +61,8 @@ window.onload = function() {
                 score -= 1;
                 demon.style.borderLeft = 'none';
                 fireballPositionLeft = Math.floor(Math.random() * -600) -50;
-                fireballPositionLeft += 8;
                 hasBorderLeft = false;
+                flame.play();
             }
         }
 
@@ -77,6 +76,7 @@ window.onload = function() {
                 demon.style.borderTop = 'none';
                 fireballPositionTop = Math.floor(Math.random() * -600) - 50;
                 hasBorderTop = false;
+                flame.play();
             }
         }
 
@@ -90,6 +90,7 @@ window.onload = function() {
                 demon.style.borderBottom = 'none';
                 fireballPositionBottom = Math.floor(Math.random() * -600) - 50;
                 hasBorderBottom = false;
+                flame.play();
             }
         }
 
@@ -103,6 +104,7 @@ window.onload = function() {
                 demon.style.borderRight = 'none';
                 fireballPositionRight = Math.floor(Math.random() * -600) - 50;
                 hasBorderRight = false;
+                flame.play();
             }
         }
 
@@ -138,7 +140,6 @@ window.onload = function() {
     function buildBorderLeft() {
         demon.style.borderLeft = '5px solid black';
         hasBorderLeft = true;
-        toggleCharacter();
         setTimeout(function() {
         demon.style.borderLeft = 'none';
         hasBorderLeft = false;

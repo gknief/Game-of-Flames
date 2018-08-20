@@ -84,6 +84,7 @@ h2 {
 }
 
 .instructions {
+    margin-top: 90px;
     float: left;
     color: #FF9505;
     height: 320px;
